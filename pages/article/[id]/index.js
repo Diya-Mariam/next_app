@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+//import { useRouter } from "next/router"
 import Link from "next/link"
 import { server } from "../../../config"
 
@@ -40,7 +40,7 @@ export const getStaticPaths = async () => {
     const articles = await res.json()
 
     const ids = articles.map((article) => (article.id))
-    const paths = ids.map((id )=> ({params: {id: id.toString( ) }}))
+    const paths = ids.map((id )=> ({params: {id: id.toString() }}))
 
     return {
         paths, 
